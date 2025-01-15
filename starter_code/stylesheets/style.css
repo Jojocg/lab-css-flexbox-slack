@@ -17,7 +17,8 @@ html {
 /*  Fonts */
 body {
     width: 100%;
-    margin: 0;
+    /* max-width: 1500px; */
+    margin: 0 auto;
     padding: 0;
     font-family: "Helvetica", sans-serif;
 }
@@ -42,77 +43,151 @@ h3 {
 
 /* Navbar */
 
+.navbar-container {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #540B51;
+}
+
 .navbar-list {
     list-style-type: none;
 }
 
+.slack-logo {
+    max-height: 28px;
+}
+
+.btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+}
+
+header {
+    display: flex;
+    background-color: #540B51;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-container > p > span {
+    color: #ECB12F;
+    font-weight: bold;
+}
+
+.sign-up-btn {
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    color: #540B51;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.blue-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #4285F4;
+    color: white;
+    margin-top: 12px;
+}
+
+.blue-btn img {
+    width: 32px;
+    padding: 0 4px;
+    background-color: white;
+}
+
+.companies-logo-container {
+    background-color: #F3EAE2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.companies-logo-container > p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.companies-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.companies-logo img {
+    height: 40px;
+} 
+
 @media (max-width: 768px) {
-    .navbar-container {
-        padding: 16px 8px;
+    
+    .navbar-list {
+        display: none;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    .intro-container {
+        height: 60%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .sign-up-btn-container {
+        height: 25%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        background-color: #540B51;
+        justify-content: space-between;
+    }
+    
+    .phone-product-img {
+        width: 100%;
+        margin-top: 36px;
     }
 
-    .slack-logo {
-        height: 24px;
-    }
+}
 
-    .btn {
-        background-color: transparent;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-    }
-
+@media (min-width: 768px) and (max-width: 1024px) {
     .navbar-list {
         display: none;
     }
 
     header {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background-color: #540B51;
-        color: #fff;
-    }
-
-    .intro-container > p > span {
-        color: #ECB12F;
-        font-weight: bold;
-    }
-
-    .intro-container {
-        height: 60%;
-    }
-
-    .sign-up-btn-container {
-        height: 35%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-    }
-
-    .sign-up-btn {
-        background-color: white;
-        color: #540B51;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-top: 30px;
-    }
-      
-
-    .phone-product-container {
-        width: ;
+        padding-bottom: 48px;
     }
 
     .phone-product-img {
-        width: 100%;
+        width: 400px;
     }
+
+    .intro-container h1 {
+        font-size: 4.5em;
+    }
+
+    .intro-container {
+        background-image: url("../images/background-singup.png");
+        background-size: cover;
+        text-align: left;
+        padding-left: 32px;
+    }
+
 }
